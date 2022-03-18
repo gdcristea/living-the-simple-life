@@ -1,0 +1,370 @@
+/* font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: #707070;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.image-full {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+/****** Typography ****
+**********************/
+
+/* Header & Navigation */
+
+h1,
+h2,
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.subtitle,
+.nav-link {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* About me */
+.p-about-me {
+    margin-bottom: 1.75rem;
+}
+
+.titles-about-me {
+    font-size: 2.1rem;
+    color: #1792D2;
+    margin-bottom: 1.75rem;
+}
+
+.main-title-about-me {
+    font-size: 2.4rem;
+    margin: 1.25rem 0;
+}
+
+/*the logo subtitle*/
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #1792D2;
+    letter-spacing: .24rem;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    color: #717171;
+    letter-spacing: 0.32rem;
+}
+
+/* Main */
+
+.article-title {
+    font-size: 2.4rem;
+    margin: 1.25rem 0;
+}
+
+.article-info {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+
+.article-body {
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.underline {
+    color:#1792D2;
+    text-decoration: underline;
+}
+
+.article-read-more {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #1792D2;
+    text-transform: uppercase;
+    letter-spacing: 0.28rem;
+    display: inline-block;
+    margin: 1.5rem 0;
+}
+
+.article-read-more-last {
+    margin-bottom: 0;
+}
+
+
+.article-read-more:hover,
+.article-read-more:focus {
+    color: #143774;
+    text-decoration: underline;
+}
+
+.article-featured {
+    border-bottom: 2px solid grey;
+    margin-bottom: 2rem;
+}
+
+/* Sidebar */
+.sidebar-article {
+    border: 2rem solid #EBEBEB;
+    margin-top: 5rem;
+    padding: 3rem 2.5rem;
+}
+
+.sidebar-article-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.36rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.sidebar-article-body {
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #143774;
+    margin-top: 1rem;
+}
+
+.sidebar-article-recent-post-title {
+    font-size: 1.8rem;
+    color: #143774;
+    margin: 1rem 0 2rem;
+    line-height: 1.4;
+}
+
+.sidebar-article-recent-post-title-last {
+    margin-bottom: 0;
+}
+
+.sidebar-article-recent-post {
+    border-top: 2px solid grey;
+    padding-top: 2rem;
+}
+
+.sidebar-article-recent-post-first {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #143774;
+    padding: 4.5em 0;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+footer p {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: rgba(255,255,255,.75);
+}
+
+.copyright {
+    font-weight: 300;
+}
+
+/****** LAYOUT ******
+**********************/
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    background-color: #F8F8F8;
+    padding: 3rem 0;
+    margin-bottom: 5em;
+}
+
+/* Navigation */
+
+.container-flex,
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-tittle {
+    margin-bottom: 3em;
+}
+
+.nav-item + .nav-item {
+    margin-top: 2.5em;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    opacity: .75;
+}
+
+.current-page {
+    border-bottom: 2px solid #717171;
+} 
+
+.current-page:hover {
+    opacity: 1;
+}
+
+/**** MEDIA Query ***
+*********************/
+
+/* .article-title {
+    font-size: 2.4rem;
+    margin: 1.25rem 0;
+}
+
+.article-info {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+} */
+
+@media (min-width: 500px) {
+    .article-info {
+        text-align: right;
+    }
+
+    .article-title {
+        margin-top: -2.75rem;
+    }
+}
+
+@media (min-width: 700px) {
+    .container-flex,
+    ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main {
+        width: 70%;
+    }
+
+    aside {
+        width: 27%;
+    }
+
+    .site-tittle {
+        margin-bottom: 0;
+    }
+
+    .nav-item + .nav-item {
+        margin-top: 0;
+    }
+
+    .nav-link {
+        margin-left: 1.75rem;
+        letter-spacing: 0;
+    }
+
+    .flex-start {
+        align-items: flex-start;
+    }
+
+    .sidebar-article-first {
+        margin-top: 0;
+    }
+
+    .article-recent {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .article-recent:last-child {
+        margin-bottom: 0;
+    }
+
+    .article-recent-main {
+        width: 67%;
+    }
+
+    .article-recent-secondary {
+        width: 30%;
+    }
+
+    .article-info {
+        text-align: left;
+    }
+
+    .article-title {
+        margin-top: 0;
+    }
+
+    .sidebar-article {
+        padding: 3rem 1rem;
+        border: 1rem solid #EBEBEB;
+    }
+
+    .article-image {
+        width: 100%;
+        min-height: 250px;
+        object-fit: cover;
+    }
+
+    .article-image-center {
+        object-position: left;
+    }
+
+    /* About me */
+
+    .sidebar-article-about-me {
+        margin-top: 0;
+    }
+}
+
+
+
+/* Main */
+
+/* Sidebar */
+
+/* Footer */
+
